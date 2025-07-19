@@ -2,14 +2,11 @@ const cartIcon = document.querySelector('#cart-icon');
 const cart = document.querySelector('.cart');
 const cartClose = document.querySelector('#cart-close');
 
-// Открытие и закрытие корзины
 cartIcon.addEventListener('click', () => cart.classList.add('active'));
 cartClose.addEventListener('click', () => cart.classList.remove('active'));
 
-// Получаем все кнопки добавления
 const addCartBtns = document.querySelectorAll('.add-cart');
 
-// Навешиваем обработчик на каждую кнопку
 addCartBtns.forEach(button => {
   button.addEventListener('click', event => {
     const productBox = event.target.closest('.product-box');
@@ -19,7 +16,6 @@ addCartBtns.forEach(button => {
 
 const cartContent = document.querySelector('.cart-content');
 
-// Функция добавления товара в корзину
 function addToCart(productBox) {
   const productImgSrc = productBox.querySelector('img').src;
   const productTitle = productBox.querySelector('.product-tit').textContent;
@@ -99,7 +95,7 @@ let cartItemCount = 0;
 
 const updateCartCount = change => {
   const cartItemBadge = document.querySelector('.count');
-  cartItemCount += change; // Corrected this line
+  cartItemCount += change; 
 
   if (cartItemCount > 0) {
     cartItemBadge.style.visibility = 'visible';
