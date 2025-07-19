@@ -101,7 +101,7 @@ const updateCartCount = change => {
     cartItemBadge.style.visibility = 'visible';
     cartItemBadge.textContent = cartItemCount;
   } else {
-    cartItemBadge.style.visibility = 'hidden'; // optional: hide if 0
+    cartItemBadge.style.visibility = 'hidden'; 
     cartItemBadge.textContent = '';
   }
 }
